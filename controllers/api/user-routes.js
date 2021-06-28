@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Comment} = require("../../models");
+const { User, Post, Comment } = require("../../models");
 
 //get all users
 router.get("/", (req, res) => {
@@ -23,11 +23,11 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "post_text", "date_created"],
+        attributes: ["id", "title", "post_text", "created_at"],
       },
       {
         model: Comment,
-        attributes: ["id", "comment_text", "date_created"],
+        attributes: ["id", "comment_text", "created_at"],
         include: {
           model: Post,
           attributes: ["title"],
@@ -111,18 +111,17 @@ router.post("/logout", (req, res) => {
   }
 });
 
-
 //Update User
-router.put('/:id', (req, res) => {
+router.put("/:id", (req, res) => {
   User.update(req.body, {
     individualHooks: true,
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+    },
   })
     .then(dbUserData => {
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user found with this id' });
+        res.status(404).json({ message: "No user found with this id" });
         return;
       }
       res.json(dbUserData);
@@ -134,15 +133,15 @@ router.put('/:id', (req, res) => {
 });
 
 // Delete User
-router.delete('/:id', (req, res) => {
+router.delete("/:id", (req, res) => {
   User.destroy({
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+    },
   })
     .then(dbUserData => {
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user found with this id' });
+        res.status(404).json({ message: "No user found with this id" });
         return;
       }
       res.json(dbUserData);
@@ -152,6 +151,5 @@ router.delete('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-
 
 module.exports = router;
