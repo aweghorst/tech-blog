@@ -8,15 +8,15 @@ html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: saddlebrown;
+  color: rgb(36, 2, 2);
 }
 
 .nav-text {
   text-decoration: none;
-  color: blanchedalmond;
+  color: rgb(198, 231, 207);
   font-weight: bold;
   transition: color 0.1s;
-  font-size: 24px;
+  font-size: 36px;
   padding: 5px;
 }
 
@@ -24,12 +24,29 @@ html {
   color: #75a4dd;
 }
 
+.title {
+  margin-top: 30px;
+}
+.title a {
+  font-size: 36px;
+  box-shadow: 5px 5px 2px silver;
+  padding: 6px;
+  color: rgb(36, 2, 2) !important;
+  background-color: rgb(205, 233, 192);
+}
+
 ul {
   list-style: none;
 }
 
 a {
-  color: saddlebrown;
+  color: rgb(205, 233, 192);
+  text-decoration: none;
+  margin-right: 25px;
+}
+
+h4 a {
+  color: rgb(221, 220, 220);
 }
 
 button {
@@ -49,7 +66,7 @@ button:hover {
 
 .btn-logout {
   display: inline;
-  background-color: saddlebrown !important;
+  background-color: rgb(36, 2, 2) !important;
   text-decoration: none;
   color: blanchedalmond;
   font-weight: bold;
@@ -58,7 +75,7 @@ button:hover {
 }
 
 .btn-logout:hover {
-  background-color: saddlebrown !important;
+  background-color: rgb(36, 2, 2) !important;
   color: #75a4dd;
 }
 
@@ -85,6 +102,32 @@ textarea {
   min-height: 100px;
 }
 
+.login-form {
+  margin-left: 25px;
+  margin-bottom: 40px;
+}
+
+.signup-form {
+  margin-left: 25px;
+}
+
+.card {
+  border: 5px solid rgb(36, 2, 2);
+  margin-bottom: 15px;
+}
+
+.card-header {
+  background-color: rgb(36, 2, 2);
+  color: white !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 30px;
+}
+
+.card p {
+  font-size: 26px;
+}
 form > div {
   margin-bottom: 2%;
 }
@@ -104,8 +147,7 @@ form label {
 
 header {
   border-bottom: 1px solid rgb(17, 10, 10);
-  display: flex;
-  justify-content: space-between;
+
   align-items: center;
   padding: 2% 2%;
   background-color: rgb(36, 2, 2);
@@ -114,6 +156,7 @@ header {
 main {
   flex: 1;
   padding: 2% 4%;
+  background-color: rgb(205, 233, 192);
 }
 
 .btn-no-style {
@@ -126,7 +169,6 @@ main {
   font-size: 100%;
   font-weight: bold;
   transition: color 0.1s;
-  margin-left: 16px;
 }
 
 .btn-no-style:hover {
@@ -167,7 +209,6 @@ h4 {
   display: block;
   margin: -1.5% 0 2% 0;
 }
-
 
 .comment-form {
   margin-bottom: 5%;
