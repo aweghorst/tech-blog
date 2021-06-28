@@ -1,6 +1,6 @@
 # Tech Blog
 
-  ## Site
+  ## Website
 
   https://shielded-ravine-34378.herokuapp.com/
   
