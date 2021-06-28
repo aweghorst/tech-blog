@@ -18,9 +18,6 @@ Post.init(
     post_text: {
       type: DataTypes.STRING,
     },
-    date_created: {
-      type: DataTypes.DATE,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
